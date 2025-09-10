@@ -164,7 +164,11 @@ Este proyecto está licenciado bajo [MIT License](LICENSE).
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Por favor, crea un fork del proyecto y envía un pull request con tus mejoras.
+Las contribuciones son bienvenidas. Para colaborar en el proyecto:
+
+1. Consulta el archivo [CONTRIBUTING.md](CONTRIBUTING.md) para obtener instrucciones detalladas sobre cómo trabajar con Git y este repositorio.
+2. Asegúrate de seguir las convenciones de código y estructura del proyecto.
+3. Crea un fork del proyecto y envía un pull request con tus mejoras.
 
 ## Entrenamiento del modelo
 
