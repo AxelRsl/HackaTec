@@ -1,0 +1,33 @@
+{
+  "name": "hackatec",
+  "version": "1.0.0",
+  "description": "Intérprete de lenguaje de señas en tiempo real",
+  "main": "start-app.js",
+  "scripts": {
+    "dev": "node start-app.js",
+    "start": "node start-app.js",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxelRsl/HackaTec.git"
+  },
+  "keywords": [
+    "sign-language",
+    "interpreter",
+    "real-time",
+    "accessibility",
+    "tensorflow",
+    "vue"
+  ],
+  "author": "AxelRsl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AxelRsl/HackaTec/issues"
+  },
+  "homepage": "https://github.com/AxelRsl/HackaTec#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "path": "^0.12.7"
+  }
+}

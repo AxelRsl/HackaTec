@@ -71,58 +71,61 @@ frontend/
 - MongoDB
 - NPM o Yarn
 
-### Pasos para instalar el backend
+### Instalación e inicio de la aplicación
 
 1. Clonar el repositorio
-2. Navegar al directorio del backend
    ```
-   cd backend
+   git clone https://github.com/AxelRsl/HackaTec.git
+   cd HackaTec
    ```
-3. Instalar dependencias
+
+2. Instalar todas las dependencias (backend y frontend)
    ```
-   npm install
+   npm run install-all
    ```
-4. Copiar el archivo .env.example a .env y configurar las variables de entorno
-   ```
-   cp .env.example .env
-   ```
-   O crear un archivo .env con el siguiente contenido:
-   ```
-   PORT=5000
-   NODE_ENV=development
-   FRONTEND_URL=http://localhost:8080
-   ```
-5. Iniciar el servidor
+
+3. Iniciar la aplicación completa (backend y frontend)
    ```
    npm run dev
    ```
 
-### Pasos para instalar el frontend
+Con estos comandos, tanto el servidor backend como el frontend se iniciarán automáticamente en puertos disponibles.
 
-1. Navegar al directorio del frontend
+#### Configuración adicional (opcional)
+
+Si deseas configurar variables de entorno específicas para el backend, puedes crear un archivo `.env` en la carpeta `backend/` con el siguiente contenido:
+   ```
+   PORT=5050
+   NODE_ENV=development
+   FRONTEND_URL=http://localhost:8080
+   ```
+### Comandos disponibles para desarrollo
+
+Una vez instalada la aplicación con los pasos anteriores, puedes usar estos comandos:
+
+#### Para iniciar toda la aplicación (frontend y backend)
+   ```
+   npm run dev
+   ```
+
+#### Para compilar el frontend para producción (opcional)
    ```
    cd frontend
-   ```
-2. Instalar dependencias
-   ```
-   npm install
-   ```
-3. Iniciar el servidor de desarrollo
-   ```
-   npm run serve
-   ```
-4. Para compilar para producción
-   ```
    npm run build
    ```
 
-### Inicio rápido (toda la aplicación)
+### Detalles del inicio rápido
 
-Para iniciar tanto el backend como el frontend con un solo comando:
+Cuando ejecutas `npm run dev` desde la raíz del proyecto:
 
-1. Desde la raíz del proyecto, ejecutar:
+1. Primero, instala todas las dependencias desde la raíz del proyecto:
    ```
-   node start-app.js
+   npm run install-all
+   ```
+
+2. Desde la raíz del proyecto, ejecuta:
+   ```
+   npm run dev
    ```
    
 Este comando iniciará automáticamente el servidor backend y frontend en puertos disponibles. Por defecto, intentará usar el puerto 5050 para el backend y 8080 para el frontend, pero si están ocupados, seleccionará automáticamente puertos alternativos.
@@ -130,10 +133,10 @@ Este comando iniciará automáticamente el servidor backend y frontend en puerto
 Si deseas especificar puertos concretos, puedes configurar variables de entorno:
    ```
    # En Windows PowerShell
-   $env:BACKEND_PORT=5500; $env:FRONTEND_PORT=3000; node start-app.js
+   $env:BACKEND_PORT=5500; $env:FRONTEND_PORT=3000; npm run dev
    
    # En CMD de Windows
-   set BACKEND_PORT=5500 && set FRONTEND_PORT=3000 && node start-app.js
+   set BACKEND_PORT=5500 && set FRONTEND_PORT=3000 && npm run dev
    ```
 
 El script muestra las URLs exactas para acceder a los servicios una vez iniciados.
